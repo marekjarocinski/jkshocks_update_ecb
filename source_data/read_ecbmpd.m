@@ -2,7 +2,7 @@
 % https://www.ecb.europa.eu/pub/pdf/annex/Dataset_EA-MPD.xlsx
 
 % use the Monetary Event Window
-fname = "EA-MPD.xlsx";
+fname = "Dataset_EA-MPD.xlsx";
 opts = detectImportOptions(fname, Sheet="Monetary Event Window");
 opts = setvartype(opts, opts.VariableNames(2:end), "double");
 tab = readtable(fname, opts);

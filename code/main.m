@@ -8,11 +8,11 @@ stockname = "STOXX50";
 % Load the Altavilla et al. (2019) Monetary Policy Database downloadable from
 % https://www.ecb.europa.eu/pub/pdf/annex/Dataset_EA-MPD.xlsx
 % use the Monetary Event Window
-fname = '../source_data/EA-MPD.xlsx';
-opts = detectImportOptions(fname, 'Sheet', 'Monetary Event Window');
-opts = setvartype(opts, opts.VariableNames(2:end), 'double');
+fname = '../source_data/Dataset_EA-MPD.xlsx';
+opts = detectImportOptions(fname, Sheet="Monetary Event Window");
+opts = setvartype(opts, opts.VariableNames(2:end), "double");
 tab = readtable(fname, opts);
-tab.date.Format = 'uuuu-MM-dd';
+tab.date.Format = "uuuu-MM-dd";
 
 % Select the sample
 isample = true(size(tab,1),1);

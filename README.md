@@ -9,7 +9,7 @@
 - `code/main.m` - Matlab script (calls other Matlab functions)
 
 ### Source data: 
-Dataset_EA-MPD.xlsx - financial variables "surprises" around ECB Governing Council announcements from 1999 to 2023, created by Altavilla, Brugnolini, Gürkaynak, Motto, Ragusa (2019) Measuring euro area monetary policy,
+Dataset_EA-MPD.xlsx - financial variables "surprises" around ECB Governing Council announcements since 1999, created by Altavilla, Brugnolini, Gürkaynak, Motto, Ragusa (2019) Measuring euro area monetary policy,
 Journal of Monetary Economics, https://doi.org/10.1016/j.jmoneco.2019.08.016.
 
 To replicate the computation of the shocks download Dataset_EA-MPD.xlsx from
