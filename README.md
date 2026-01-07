@@ -13,13 +13,13 @@ Dataset_EA-MPD.xlsx - financial variables "surprises" around ECB Governing Counc
 Journal of Monetary Economics, https://doi.org/10.1016/j.jmoneco.2019.08.016.
 
 To replicate the computation of the shocks download Dataset_EA-MPD.xlsx from
-https://www.ecb.europa.eu/pub/pdf/annex/Dataset_EA-MPD.xlsx and place it in `source_data/`
+https://www.ecb.europa.eu/pub/pdf/annex/Dataset_EA-MPD.xlsx, place it in `source_data/` and run `code/main.m`
 
 ---
 
 #### Definitions of the variables in `shocks_ecb_mpd_me_d.csv` and `shocks_ecb_mpd_me_m.csv`:
-- pc1 - surprise in the "policy indicator", ie the 1st principal component of the Monetary Event-window changes in overnight index swaps (OIS) with maturities 1-, 3-, 6-months and 1-year (Identifiers: OIS1M, OIS3M, OIS6M, OIS1Y)
-- STOXX50 - Monetary Event-window changes in the Euro Stoxx 50
+- pc1 - policy surprise factor: first principal component of Monetary Event-window changes in overnight index swaps (OIS) with maturities 1-, 3-, 6-months and 1-year (Identifiers: OIS1M, OIS3M, OIS6M, OIS1Y), scaled to have the same standard deviation as the OIS1Y Monetary Event-window change (in % p.a.)
+- STOXX50 - Monetary Event-window changes in the Euro Stoxx 50 (100 x log change)
 
 - MP_pm,CBI_pm - Monetary Policy and Central Bank Information shocks obtained with simple ("Poor Man's") sign restrictions.
 - MP_median,CBI_median - Monetary Policy and Central Bank Information shocks obtained with the median rotation that implements the sign restrictions.

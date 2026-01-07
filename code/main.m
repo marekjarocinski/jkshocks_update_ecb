@@ -26,12 +26,7 @@ fprintf('Data from %s to %s, T=%d\n', tab.date(1), tab.date(end), size(tab,1))
 
 
 % Compute the 1st principal component
-X = tab{:, irnames};
-[~,score] = pca(normalize(X,'scale','std'), 'Centered', false);
-% rescale the 1st principal component
-pc1 = score(:,1)/std(score(:,1))*std(tab.OIS_1Y)/100;
-
-% add pc1 to the table
+pc1 = mypc(tab, irnames, "OIS_1Y")/100;
 tab.pc1 = round(pc1,8);
 
 % keep only the variables we need
